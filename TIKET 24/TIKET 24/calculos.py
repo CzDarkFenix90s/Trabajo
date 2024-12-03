@@ -42,6 +42,12 @@ def calcularEdad(anioNacimiento):
     
     edad = anioActual - anioNacimiento
     return edad
+def calcularCuota(prst,inte,plaz):
+    val= (inte/12)
+    i= val/100
+    cuota=(prst*i)/(1-(1+i)**(-plaz))
+    return cuota
+
 
 
 
