@@ -18,15 +18,13 @@ def determinarResultadosIMC(nm1):
         return "Obesidad Grado 3"
     else:
         return "IMC fuera de rango"
-def calcularEdad(anioNacimiento):
-    anioActual = datetime.now().year
-    
-    if anioNacimiento < 0 or anioNacimiento > anioActual:
-        return -1
-    
-    edad = anioActual - anioNacimiento
-    return edad
-
+def encontrarMayor(n1,n2,n3):
+    mayorActual=n1
+    if n2 > mayorActual:
+        mayorActual= n2
+    if n3 > mayorActual:
+        mayorActual= n3
+    return mayorActual
 def encontrarMenor(l1, l2, l3, l4):
     menorActual = l1
     if l2 < menorActual:
@@ -36,6 +34,14 @@ def encontrarMenor(l1, l2, l3, l4):
     if l4 < menorActual:
         menorActual = l4
     return menorActual
+def calcularEdad(anioNacimiento):
+    anioActual = datetime.now().year
+    
+    if anioNacimiento < 0 or anioNacimiento > anioActual:
+        return -1
+    
+    edad = anioActual - anioNacimiento
+    return edad
 
 
 
